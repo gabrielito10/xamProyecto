@@ -64,12 +64,18 @@
                </ActivityIndicator>
                 <Label 
                     Grid.Row="4"
-                    Grid.ColumnSpan="2"
+                    Grid.Column="0"
                     Text="Recuperar Contraseña"
                     FontSize="Medium"
                     TextColor="Blue"
-                    HorizontalOptions="CenterAndExpand">
+                    Margin="20,0,0,0"
+                    VerticalOptions="Center">
                 </Label>
+                <Switch
+                    Grid.Row="4"
+                    Grid.Column="1"
+                    HorizontalOptions="EndAndExpand">
+                </Switch>
                 <Button
                     Grid.Row="5"
                     Grid.Column="0"
