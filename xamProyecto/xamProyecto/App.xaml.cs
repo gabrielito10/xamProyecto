@@ -10,7 +10,7 @@ namespace xamProyecto
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new ();
         }
 
         protected override void OnStart()
