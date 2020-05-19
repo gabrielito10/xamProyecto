@@ -7,9 +7,11 @@
              x:Class="xamProyecto.Views.LoginPage"
              BindingContext="{Binding Main, Source={StaticResource Locator}}">
     <ContentPage.Content>
-        <StackLayout BackgroundColor="RoyalBlue">
+        <StackLayout BackgroundColor="RoyalBlue"
+                     BindingContext="{Binding Login}">
             <Grid VerticalOptions="CenterAndExpand" BackgroundColor="White" Margin="20,0,20,0">
                 <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
@@ -41,6 +43,7 @@
                     VerticalOptions="Center">
                 </Label>
                 <Entry
+                    Text="{Binding Email, Mode=TwoWay}"
                     Grid.Row="1"
                     Grid.Column="1"
                     Placeholder="Ingrese E-mail">
@@ -55,30 +58,44 @@
                     VerticalOptions="Center">
                 </Label>
                 <Entry
+                    Text="{Binding Password, Mode=TwoWay}"
                     Grid.Row="2"
                     Grid.Column="1"
                     Placeholder="Ingrese contraseña">
                 </Entry>
                 <ActivityIndicator
+                    IsRunning="{Binding EstaCorriendo, Mode=TwoWay}"
                     Grid.Row="3"
                     Grid.ColumnSpan="2">
                </ActivityIndicator>
                 <Label 
                     Grid.Row="4"
+                    Grid.ColumnSpan="2"
+                    Text="Olvido su  Contraseña?"
+                    FontSize="Medium"
+                    TextColor="Blue"
+                    Margin="20,0,0,0"
+                    HorizontalOptions="CenterAndExpand">
+                </Label>
+                <Label 
+                    Grid.Row="5"
                     Grid.Column="0"
-                    Text="Recuperar Contraseña"
+                    Text="Recordar Contraseña"
                     FontSize="Medium"
                     TextColor="Blue"
                     Margin="20,0,0,0"
                     VerticalOptions="Center">
                 </Label>
                 <Switch
-                    Grid.Row="4"
+                    IsToggled="{Binding EstaRecordando, Mode=TwoWay}"
+                    Grid.Row="5"
                     Grid.Column="1"
+                    Margin="0,0,30,0"
                     HorizontalOptions="EndAndExpand">
                 </Switch>
                 <Button
-                    Grid.Row="5"
+                    Command="{Binding ComandoLogin}"
+                    Grid.Row="6"
                     Grid.Column="0"
                     Text="INGRESAR"
                     BackgroundColor="DarkGreen"
@@ -88,7 +105,7 @@
                     CornerRadius="15">
                 </Button>
                 <Button
-                    Grid.Row="5"
+                    Grid.Row="6"
                     Grid.Column="1"
                     Text="REGISTRO"
                     BackgroundColor="DarkBlue"
@@ -98,7 +115,7 @@
                     CornerRadius="15">
                 </Button>
                 <Label
-                    Grid.Row="6"
+                    Grid.Row="7"
                     Grid.ColumnSpan="2"
                     Text="Iniciar sesion con: "
                     TextColor="DarkViolet"
@@ -106,7 +123,7 @@
                     HorizontalOptions="Center">
                 </Label>
                 <ImageButton 
-                    Grid.Row="7"
+                    Grid.Row="8"
                     Grid.Column="0"
                     Source="imgFacebook"
                     HeightRequest="100"
@@ -114,7 +131,7 @@
                     HorizontalOptions="EndAndExpand">
                 </ImageButton>
                 <ImageButton 
-                    Grid.Row="7"
+                    Grid.Row="8"
                     Grid.Column="1"
                     Source="imgGoogle"
                     HeightRequest="100"
