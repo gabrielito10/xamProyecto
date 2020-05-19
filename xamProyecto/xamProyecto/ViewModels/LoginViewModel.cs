@@ -12,7 +12,7 @@ namespace xamProyecto.ViewModels
         public string Password { get; set; }
         public bool EstaCorriendo { get; set; }
         public bool EstaRecordando { get; set; }
-        public  ICommand ComandoLogin { get; set; }
+        public  ICommand ComandoLogin { get { return new RealayCommand(Login); } }
         #endregion
 
         #region Contructores
