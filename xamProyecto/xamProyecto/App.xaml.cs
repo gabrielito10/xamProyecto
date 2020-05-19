@@ -1,6 +1,5 @@
-﻿using System;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+﻿using Xamarin.Forms;
+using xamProyecto.Views;
 
 namespace xamProyecto
 {
@@ -10,7 +9,7 @@ namespace xamProyecto
         {
             InitializeComponent();
 
-            MainPage = new ();
+            MainPage = new LoginPage();
         }
 
         protected override void OnStart()

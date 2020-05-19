@@ -1,12 +1,120 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="xamProyecto.Views.LoginPage">
-  <!--Pages can be added as references or inline-->
-  <ContentPage Title="Tab 1" />
-  <ContentPage Title="Tab 2" />
-  <ContentPage Title="Tab 3" />
-</TabbedPage>
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="RoyalBlue">
+            <Grid VerticalOptions="CenterAndExpand" BackgroundColor="White" Margin="20,0,20,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Image
+                    Grid.Row="0"
+                    Grid.ColumnSpan="2"
+                    Source="imgLogin"
+                    HeightRequest="150"
+                    WidthRequest="150"
+                    Margin="0,20,0,0">
+                </Image>
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Text="Email"
+                    FontSize="Medium"
+                    TextColor="Black"
+                    Margin="15,0,0,0"
+                    VerticalOptions="Center">
+                </Label>
+                <Entry
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Placeholder="Ingrese E-mail">
+                </Entry>
+                <Label
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    Text="Contraseña"
+                    FontSize="Medium"
+                    TextColor="Black"
+                    Margin="15,0,0,0"
+                    VerticalOptions="Center">
+                </Label>
+                <Entry
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    Placeholder="Ingrese contraseña">
+                </Entry>
+                <ActivityIndicator
+                    Grid.Row="3"
+                    Grid.ColumnSpan="2">
+               </ActivityIndicator>
+                <Label 
+                    Grid.Row="4"
+                    Grid.ColumnSpan="2"
+                    Text="Recuperar Contraseña"
+                    FontSize="Medium"
+                    TextColor="Blue"
+                    HorizontalOptions="CenterAndExpand">
+                </Label>
+                <Button
+                    Grid.Row="5"
+                    Grid.Column="0"
+                    Text="INGRESAR"
+                    BackgroundColor="DarkGreen"
+                    TextColor="White"
+                    FontSize="Medium"
+                    Margin="20,0,0,0"
+                    CornerRadius="15">
+                </Button>
+                <Button
+                    Grid.Row="5"
+                    Grid.Column="1"
+                    Text="REGISTRO"
+                    BackgroundColor="DarkBlue"
+                    FontSize="Medium"
+                    TextColor="White"
+                    Margin="0,0,20,0"
+                    CornerRadius="15">
+                </Button>
+                <Label
+                    Grid.Row="6"
+                    Grid.ColumnSpan="2"
+                    Text="Iniciar sesion con: "
+                    TextColor="DarkViolet"
+                    FontSize="Medium"
+                    HorizontalOptions="Center">
+                </Label>
+                <ImageButton 
+                    Grid.Row="7"
+                    Grid.Column="0"
+                    Source="imgFacebook"
+                    HeightRequest="100"
+                    WidthRequest="100"
+                    HorizontalOptions="EndAndExpand">
+                </ImageButton>
+                <ImageButton 
+                    Grid.Row="7"
+                    Grid.Column="1"
+                    Source="imgGoogle"
+                    HeightRequest="100"
+                    WidthRequest="100"
+                    HorizontalOptions="StartAndExpand">
+                </ImageButton>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
