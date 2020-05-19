@@ -4,8 +4,11 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="xamProyecto.App">
+             x:Class="xamProyecto.App"
+             xmlns:infra="clr-namespace:xamProyecto.Infraestructura">
     <Application.Resources>
-
+        <ResourceDictionary>
+            <infra:InstanciaLocator x:Key="Locator"/>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
