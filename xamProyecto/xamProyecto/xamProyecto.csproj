@@ -9,6 +9,10 @@
     <DebugType>portable</DebugType>
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
+  
+  <PropertyGroup>
+    <MSBuildWarningsAsMessages>XA5302</MSBuildWarningsAsMessages>
+</PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="4.3.0.908675" />
