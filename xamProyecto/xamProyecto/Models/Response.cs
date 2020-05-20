@@ -4,7 +4,10 @@ using System.Text;
 
 namespace xamProyecto.Models
 {
-    class Response
+    public class Respuesta
     {
+        public bool IsSuccess { get; set; }
+        public string Message { get; set; }
+        public object Result { get; set; }
     }
 }

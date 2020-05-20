@@ -29,8 +29,8 @@
                     Grid.Row="0"
                     Grid.ColumnSpan="2"
                     Source="imgLogin"
-                    HeightRequest="150"
-                    WidthRequest="150"
+                    HeightRequest="75"
+                    WidthRequest="75"
                     Margin="0,20,0,0">
                 </Image>
                 <Label
