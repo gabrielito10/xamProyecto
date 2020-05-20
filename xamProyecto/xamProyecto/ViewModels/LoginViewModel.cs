@@ -59,6 +59,8 @@ namespace xamProyecto.ViewModels
         #region Contructores
         public LoginViewModel()
         {
+            this.Email = "gabo@gmail.com";
+            this.Password = "1234";
             this.EstaRecordando = true;
         }
         #endregion

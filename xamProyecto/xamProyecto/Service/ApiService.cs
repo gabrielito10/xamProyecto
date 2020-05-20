@@ -8,7 +8,6 @@ using Newtonsoft.Json;
 using Plugin.Connectivity;
 using xamProyecto.Models;
 
-
 namespace xamProyecto.Service
 {
     public class ApiService
