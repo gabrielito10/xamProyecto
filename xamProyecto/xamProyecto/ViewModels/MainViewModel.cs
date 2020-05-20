@@ -4,7 +4,16 @@ using System.Text;
 
 namespace xamProyecto.ViewModels
 {
-    class MainViewModel
+    public class MainViewModel
     {
+        public LoginViewModel Login { get; set; }
+        internal PaisesViewModel Otro { get; set; }
+
+        #region Contructures
+        public MainViewModel()
+        {
+            this.Login = new LoginViewModel();
+         }
+        #endregion
     }
 }

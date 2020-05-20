@@ -15,7 +15,7 @@ namespace xamProyecto.ViewModels
         private string _Password;
         private bool _EstaCorriendo;
         private bool _EstaRecordando;
-        private string _Email="";;
+        private string _Email = "";
         /*public string Password
         {
             get
