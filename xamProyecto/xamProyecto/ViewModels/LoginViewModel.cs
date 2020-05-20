@@ -87,7 +87,7 @@ namespace xamProyecto.ViewModels
                 return;
             }
             this.EstaCorriendo = false;
-            //await Application.Current.MainPage.Navigation.PushAsync(new PaisesPage());
+            await Application.Current.MainPage.Navigation.PushAsync(new PaisesPage());
         }
         #endregion
     }
