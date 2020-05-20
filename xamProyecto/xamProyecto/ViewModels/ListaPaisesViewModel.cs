@@ -5,17 +5,17 @@ using Xamarin.Forms;
 
 namespace xamProyecto.ViewModels
 {
-    public class PaisesViewModel : BaseViewModel
+    class ListaPaisesViewModel :BaseViewModel
     {
-        public PaisesViewModel()
+        public ListaPaisesViewModel()
         {
             CargarPaises();
         }
         private async void CargarPaises()
         {
-            
-                await Application.Current.MainPage.DisplayAlert("Error", "hola", "Aceptar");
-            
+
+            await Application.Current.MainPage.DisplayAlert("Error", "hola", "Aceptar");
+
         }
     }
 }
