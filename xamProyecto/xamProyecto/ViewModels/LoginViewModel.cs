@@ -4,17 +4,18 @@ using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
 using Xamarin.Forms;
+using xamProyecto.Views;
 
 namespace xamProyecto.ViewModels
 {
 
     public class LoginViewModel : BaseViewModel //INotifyPropertyChanged
     {
-        private string _Email;
+        
         private string _Password;
         private bool _EstaCorriendo;
         private bool _EstaRecordando;
-
+        private string _Email="";;
         /*public string Password
         {
             get
@@ -86,7 +87,7 @@ namespace xamProyecto.ViewModels
                 return;
             }
             this.EstaCorriendo = false;
-
+            //await Application.Current.MainPage.Navigation.PushAsync(new PaisesPage());
         }
         #endregion
     }
