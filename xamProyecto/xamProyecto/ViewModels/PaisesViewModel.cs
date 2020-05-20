@@ -4,7 +4,7 @@ using System.Text;
 
 namespace xamProyecto.ViewModels
 {
-    class MainViewModel
+    class PaisesViewModel
     {
     }
 }
