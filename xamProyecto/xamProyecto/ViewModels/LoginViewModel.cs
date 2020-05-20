@@ -7,6 +7,7 @@ using Xamarin.Forms;
 
 namespace xamProyecto.ViewModels
 {
+
     public class LoginViewModel : BaseViewModel //INotifyPropertyChanged
     {
         private string _Email;
@@ -34,9 +35,9 @@ namespace xamProyecto.ViewModels
         public string Email
         {
             get { return this._Email; }
-            set { SetValue(ref this._Password, value); }
+            set { SetValue(ref this._Email, value); }
         }
-        public string Password 
+        public string Password
         {
             get { return this._Password; }
             set { SetValue(ref this._Password, value); }
@@ -46,11 +47,12 @@ namespace xamProyecto.ViewModels
             get { return this._EstaCorriendo; }
             set { SetValue(ref this._EstaCorriendo, value); }
         }
-        public bool EstaRecordando {
+        public bool EstaRecordando
+        {
             get { return this._EstaRecordando; }
             set { SetValue(ref this._EstaRecordando, value); }
         }
-        
+
         #endregion
 
         #region Contructores
@@ -75,7 +77,7 @@ namespace xamProyecto.ViewModels
                 await Application.Current.MainPage.DisplayAlert("Error", "Ingrese Contraseña", "Aceptar");
                 return;
             }
-            if (this.Email != "gabo@gmail.com" || this.Password !="1234")
+            if (this.Email != "gabo@gmail.com" || this.Password != "1234")
             {
                 await Application.Current.MainPage.DisplayAlert("Error", "El Usuario o la contraseña no son validos", "Aceptar");
                 Password = string.Empty;
