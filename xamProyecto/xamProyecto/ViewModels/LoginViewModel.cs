@@ -77,12 +77,16 @@ namespace xamProyecto.ViewModels
                 await Application.Current.MainPage.DisplayAlert("Error", "Ingrese Contraseña", "Aceptar");
                 return;
             }
+            this.EstaCorriendo = true;
             if (this.Email != "gabo@gmail.com" || this.Password != "1234")
             {
                 await Application.Current.MainPage.DisplayAlert("Error", "El Usuario o la contraseña no son validos", "Aceptar");
                 Password = string.Empty;
+                this.EstaCorriendo = false;
                 return;
             }
+            this.EstaCorriendo = false;
+
         }
         #endregion
     }
