@@ -7,10 +7,60 @@
              x:Class="xamProyecto.Views.PaisesPage"
              BindingContext="{Binding Main, Source={StaticResource Locator}}">
     <ContentPage.Content>
-        <StackLayout BindingContext="Lista" >
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout BindingContext="{Binding Paises}" >
+            <SearchBar 
+                Placeholder="Buscar"
+                Text="{Binding Filtro, Mode=TwoWay}"
+                SearchCommand="{Binding ComandoBuscar}"
+                BackgroundColor="Silver">
+                
+            </SearchBar>
+            <ListView
+                BackgroundColor="Silver"
+                SeparatorVisibility="None"
+                ItemsSource="{Binding Paises}"
+                HasUnevenRows="True"
+                IsPullToRefreshEnabled="True"
+                IsRefreshing="{Binding EstaRefrescando, Mode=TwoWay}"
+                RefreshCommand="{Binding ComandoRefrescar}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame
+                                CornerRadius="15"
+                                HasShadow="True"
+                                Margin="5,5,5,5">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <StackLayout
+                                    Grid.Column="0"
+                                    VerticalOptions="Center"
+                                    Margin="15,0,15,0">
+                                        <Label 
+                                        FontAttributes="Bold"
+                                        FontSize="Medium"
+                                        Text="{Binding Name}"
+                                        TextColor="DarkBlue">
+                                        </Label>
+                                        <Label
+                                        TextColor="DarkViolet"
+                                        Text="{Binding Capital}">
+                                        </Label>
+                                    </StackLayout>
+                                    <Image
+                                    Grid.Column="1"
+                                    Source="ic_launcher"
+                                    HorizontalOptions="EndAndExpand">
+                                    </Image>
+                                </Grid>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
