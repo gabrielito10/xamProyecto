@@ -30,6 +30,13 @@ namespace xamProyecto.ViewModels
         #region Metodos
         private async void CargarPaises()
         {
+            var conexion = await this.ServicioAPI.CheckConnection();
+            if(!conexion.IsSuccess)
+            {
+                await Application.Current.MainPage.DisplayAlert("Error", conexion.Message, "Aceptar");
+                await Application.Current.MainPage.Navigation.PopAsync();
+                return;
+            }
             var Response = await this.ServicioAPI.GetList<ListaPaises>("http://restcountries.eu", "/rest", "/v2/all");
             if (!Response.IsSuccess)
             {

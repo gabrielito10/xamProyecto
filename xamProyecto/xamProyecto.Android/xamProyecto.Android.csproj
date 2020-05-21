@@ -91,9 +91,6 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\network_security_config.xml" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\xamProyecto\xamProyecto.csproj">
       <Project>{B423FF4C-0E26-4E93-94D5-0305CBFCE35F}</Project>
       <Name>xamProyecto</Name>
