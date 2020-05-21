@@ -7,7 +7,7 @@
              x:Class="xamProyecto.Views.PaisesPage"
              BindingContext="{Binding Main, Source={StaticResource Locator}}">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout BindingContext="Lista" >
             <Label Text="Welcome to Xamarin.Forms!"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />

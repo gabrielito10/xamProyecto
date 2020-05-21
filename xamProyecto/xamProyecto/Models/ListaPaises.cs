@@ -1,12 +1,11 @@
-﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿
+using Newtonsoft.Json;
 
 namespace xamProyecto.Models
 {
-    public class Countries
+    public class ListaPaises
     {
+
         [JsonProperty("name")]
         public string Name { get; set; }
 
@@ -41,10 +40,10 @@ namespace xamProyecto.Models
         public string Demonym { get; set; }
 
         [JsonProperty("area")]
-        public long Area { get; set; }
+        public long? Area { get; set; }
 
         [JsonProperty("gini")]
-        public double Gini { get; set; }
+        public double? Gini { get; set; }
 
         [JsonProperty("timezones")]
         public string[] Timezones { get; set; }
@@ -68,7 +67,7 @@ namespace xamProyecto.Models
         public Translations Translations { get; set; }
 
         [JsonProperty("flag")]
-        public Uri Flag { get; set; }
+        public string Flag { get; set; }
 
         [JsonProperty("regionalBlocs")]
         public RegionalBloc[] RegionalBlocs { get; set; }
