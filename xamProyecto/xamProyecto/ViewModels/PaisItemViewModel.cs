@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using xamProyecto.Models;
 
 namespace xamProyecto.ViewModels
 {
-    class PaisItemViewModel
+    public class PaisItemViewModel : ListaPaises
     {
     }
 }

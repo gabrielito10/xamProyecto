@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace xamProyecto.ViewModels
+﻿namespace xamProyecto.ViewModels
 {
-    class PaisViewModel
+    public class PaisViewModel
     {
     }
 }

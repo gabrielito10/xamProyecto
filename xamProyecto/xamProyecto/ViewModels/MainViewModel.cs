@@ -8,6 +8,7 @@ namespace xamProyecto.ViewModels
     {
         public LoginViewModel Login { get; set; }
         public PaisesViewModel Paises { get; set; }
+        public PaisViewModel Pais { get; set; }
 
         #region Contructures
         public MainViewModel()

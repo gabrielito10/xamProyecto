@@ -12,8 +12,8 @@
                 Placeholder="Buscar"
                 Text="{Binding Filtro, Mode=TwoWay}"
                 SearchCommand="{Binding ComandoBuscar}"
-                BackgroundColor="Silver">
-                
+                BackgroundColor="White"
+                TextColor="Black">
             </SearchBar>
             <ListView
                 BackgroundColor="Silver"
@@ -30,6 +30,9 @@
                                 CornerRadius="15"
                                 HasShadow="True"
                                 Margin="5,5,5,5">
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding ComandoSeleccionarPais}"/>
+                                </Frame.GestureRecognizers>
                                 <Grid>
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="*"/>
